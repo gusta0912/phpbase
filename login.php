@@ -1,4 +1,4 @@
-<?php
+ <?php
 include'connect.php';
 if(isset($_POST['sub'])){
     $u=$_POST['user'];
@@ -14,6 +14,10 @@ if(isset($_POST['sub'])){
        echo 'username or password does not exist';
    }
   
+}
+if (isset($_POST['reg'])) {
+  header('location: reg.php');
+  exit();
 }
 ?>
 <html>
@@ -43,13 +47,9 @@ if(isset($_POST['sub'])){
                         <input type="submit" name="sub" value="submit">
                     </td>
                 </tr>
-
+               <tr>
                     <td>
-                        <input type="submit" name="sub" value="register">
-
-                    </td>
-                    <td>
-                    <a href="reg.php">register</a>
+                        <input type="submit" name="reg" value="registrar">
                     </td>
                 </tr>
             </table>

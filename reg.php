@@ -13,6 +13,10 @@ if(isset($_POST['sub'])){
     $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
     mysqli_query($con, $i);
 }
+if (isset($_POST['logar'])) {
+    header('Location: login.php');
+  exit();
+}
 ?>
 
 <html>
@@ -68,12 +72,15 @@ if(isset($_POST['sub'])){
                         <input type="submit" value="submit" name="sub">
                                
                     </td>
+                </tr>
+
+                <tr>
                     <td>
-                        <input type="submit" value="submit" name="sub">
-                        <a href="login.php">login</a>
+                        <input type="submit" value="Logar" name="logar">
                                
                     </td>
                 </tr>
+                
             </table>
     </body>
 </html>
